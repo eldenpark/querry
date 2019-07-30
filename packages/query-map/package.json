@@ -1,0 +1,23 @@
+{
+  "author": "Elden S. Park",
+  "dependencies": {
+    "history": "^4.9.0",
+    "jege": "^0.4.0",
+    "query-string": "^6.8.2",
+    "react": "^16.8.6",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/history": "^4.7.2",
+    "@types/react": "^16.8.23",
+    "@types/react-router": "^5.0.3",
+    "@types/react-router-dom": "^4.3.4"
+  },
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "main": "lib/index.js",
+  "name": "query-map",
+  "version": "0.0.0"
+}

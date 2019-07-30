@@ -19,6 +19,6 @@
   "license": "ISC",
   "main": "lib/index.js",
   "name": "querry",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "gitHead": "822c9096487a130257b47e44c618ab683df1ca53"
 }

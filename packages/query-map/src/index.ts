@@ -1,17 +1,17 @@
-import useQueryMap from './useQueryMap';
+import useQuerry from './useQuerry';
 import {
   parse,
   stringify,
-} from './QueryMap';
+} from './Querry';
 import {
-  QueryMappedBrowserRouter,
-  QueryMappedStaticRouter,
-} from './QueryMapContext';
+  QuerriedBrowserRouter,
+  QuerriedStaticRouter,
+} from './components';
 
 export {
   parse,
-  QueryMappedBrowserRouter,
-  QueryMappedStaticRouter,
+  QuerriedBrowserRouter,
+  QuerriedStaticRouter,
   stringify,
-  useQueryMap,
+  useQuerry,
 };

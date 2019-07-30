@@ -6,17 +6,17 @@ import QueryString from 'query-string';
 
 const QUERY_OBJECT = Symbol('queryObject');
 
-export const queryMapConstructionSecret = Symbol('queryMapConstructionSecret');
+export const querryConstructionSecret = Symbol('querryConstructionSecret');
 
 const useConstructorError = new Error(
-  `You have to use factory method such as 'createStaticQueryMap()'`,
+  `You have to use factory method such as 'createStaticQuerry()'`,
 );
 
-export default class QueryMap {
+export default class Querry {
   [QUERY_OBJECT]: QueryObject = {};
 
-  constructor(_queryMapConstructionSecret, history?: History, location?: Location) {
-    if (_queryMapConstructionSecret !== queryMapConstructionSecret) {
+  constructor(_querryConstructionSecret, history?: History, location?: Location) {
+    if (_querryConstructionSecret !== querryConstructionSecret) {
       throw useConstructorError;
     }
 
@@ -59,7 +59,7 @@ export function parse(search): QueryObject {
         }
       });
   } catch (err) {
-    console.error('QueryMap.parse(): error parsing query: %s', search); // eslint-disable-line no-console
+    console.error('Querry.parse(): error parsing query: %s', search); // eslint-disable-line no-console
   }
   return query;
 }

@@ -1,5 +1,4 @@
-import { QueryMappedStaticRouter } from 'query-map';
-// import { StaticRouter } from 'react-router-dom';
+import { QuerriedStaticRouter } from 'querry';
 import React from 'react';
 
 import Universal from '../universal/Universal';
@@ -8,9 +7,9 @@ const ServerApp: React.FC<ServerAppProps> = ({
   requestUrl,
 }) => {
   return (
-    <QueryMappedStaticRouter location={requestUrl}>
+    <QuerriedStaticRouter location={requestUrl}>
       <Universal />
-    </QueryMappedStaticRouter>
+    </QuerriedStaticRouter>
   );
 };
 

@@ -1,4 +1,3 @@
-// Inspired by https://github.com/CharlesStover/use-react-router/blob/master/src/use-react-router.ts/
 import {
   UnregisterCallback,
 } from 'history';
@@ -13,8 +12,8 @@ import {
   RouteComponentProps,
 } from 'react-router';
 
-import { QueryMapContext } from './QueryMapContext';
-import QueryMap from './QueryMap';
+import QuerryContext from './QuerryContext';
+import Querry from './Querry';
 
 const incorrectVersionError = new Error(
   'use-react-router may only be used with react-router@^5.',
@@ -28,11 +27,11 @@ const incorrectUnsubscriberError = new Error(
   'Something other than UnregisterCallback is registered',
 );
 
-const missingQueryMapContextError = new Error(
-  'You have to wrap the component with <QueryMapProvider />',
+const missingQuerryContextError = new Error(
+  'You have to wrap the component with <QuerryProvider />',
 );
 
-export default function useQueryMap(): UseQueryMapReturn {
+export default function useQuerry(): UseQuerryReturn {
   if (!__RouterContext) {
     throw incorrectVersionError;
   }
@@ -42,9 +41,9 @@ export default function useQueryMap(): UseQueryMapReturn {
     throw missingRouterContextError;
   }
 
-  const queryMap = useContext(QueryMapContext);
-  if (!queryMap) {
-    throw missingQueryMapContextError;
+  const querry = useContext(QuerryContext);
+  if (!querry) {
+    throw missingQuerryContextError;
   }
 
   const historySubscribers = useRef<UnregisterCallback[]>([]);
@@ -69,7 +68,7 @@ export default function useQueryMap(): UseQueryMapReturn {
   );
   return {
     ...router,
-    queryMap,
+    querry,
   };
 }
 
@@ -89,4 +88,4 @@ function useForceUpdate() {
   return forceUpdate;
 }
 
-type UseQueryMapReturn = RouteComponentProps & { queryMap: QueryMap };
+type UseQuerryReturn = RouteComponentProps & { querry: Querry };

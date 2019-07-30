@@ -1,11 +1,11 @@
 import React from 'react';
-import { useQueryMap } from 'query-map';
+import { useQuerry } from 'querry';
 
 const PageOne: React.FC<{}> = () => {
-  const { history, queryMap } = useQueryMap();
+  const { history, querry } = useQuerry();
 
   const handleClickChangeQuery = React.useCallback(() => {
-    const newQuery = queryMap.mutate((obj) => ({
+    const newQuery = querry.mutate((obj) => ({
       a: 1,
       b: 'foo',
       c: {
@@ -31,7 +31,7 @@ const PageOne: React.FC<{}> = () => {
           current query string
         </p>
         <p>
-          {queryMap.toString()}
+          {querry.toString()}
         </p>
       </div>
     </div>

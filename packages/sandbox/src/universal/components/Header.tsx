@@ -1,5 +1,5 @@
 import React from 'react';
-import { useQueryMap } from 'query-map';
+import { useQuerry } from 'querry';
 
 const Title = ({
   pathname,
@@ -10,7 +10,7 @@ const Title = ({
 };
 
 const Header: React.FC<{}> = () => {
-  const { history, location } = useQueryMap();
+  const { history, location } = useQuerry();
   const { pathname } = location;
 
   const handleClickButton = React.useCallback((route) => () => {

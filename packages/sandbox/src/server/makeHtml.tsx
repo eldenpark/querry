@@ -33,7 +33,7 @@ const makeHtml: MakeHtml<State> = async function makeHtml({
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
-  <title>query-map</title>
+  <title>querry</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.dev.js"></script>
 </head>
 <body>

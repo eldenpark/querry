@@ -2,7 +2,7 @@ const { argv } = require('yargs');
 const { createLaunch, proc } = require('process-launch');
 const { logger } = require('jege/server');
 
-const log = logger('[monorepo-query-map]');
+const log = logger('[monorepo-querry]');
 
 const processDefinitions = {
   sandbox: proc(

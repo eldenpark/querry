@@ -5,10 +5,10 @@ const fs = require('fs');
 const path = require('path');
 
 const cwd = process.cwd();
-const log = logger('[monorepo-query-map]');
+const log = logger('[monorepo-querry]');
 
 const buildOrder = [
-  'query-map',
+  'querry',
 ];
 
 async function batchExecuteBuild(buildDefinitions) {
